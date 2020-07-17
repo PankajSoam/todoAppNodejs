@@ -1,8 +1,59 @@
 <html>
     <head>
+        <title><%= title%></title>
+        <link rel="stylesheet" href="/css/home.css">
 
     </head>
     <body>
-        <h1>rendered from ejs view</h1>
+        <div id="container">
+        <h1>Todo List</h1>
+        <form action="/create-task" id="addTask" method="POST">
+            <input type="text" id="inputBox" name="name" placeholder="Enter Task..." required>
+            
+            
+            <input type="date" id="taskDate" name="date" min="2020-01-01" max="2022-12-31" required>
+
+            <select name="category" id="" placeholder="choose a category" required>
+                <option value="" disabled selected>--Choose a category--</option>
+                <option value="school">School</option>
+                <option value="work">Work</option>
+                <option value="home">Home</option>
+                <option value="personal">Personal</option>
+                <option value="other">Other</option>
+            </select>
+            
+        </form>
+        
+        <button type="submit" id="submit-btn" form="addTask">ADD TASK</button>
+        <button type="submit"  form="deleteTask">DELETE TASK</button>
+        
+        <div>
+            <form action="/delete-task" id="deleteTask" method="GET">
+                
+            <ul>
+                <%for( let i of task){ %>
+                    <li>
+                        <span id="checkbox">
+                        <input type="checkbox" class="strikeThrough" name="<%= i._id %>" value="">
+                    </span>
+                        <span id="nameDate">
+                        <h3><%= i.name %></h3>
+                        <p><%= i.date %></p>
+                        </span>
+                        <span id="category">
+                        <p id="catText" ><%= i.category %></p>
+                        </span> 
+                    </li>
+                <% } %>
+                
+            </form>
+            </ul>
+        </div>
+
+    </div>
+
+        
+
+        <script type="text/javascript" src="/js/home.js"></script>
     </body>
 </html>

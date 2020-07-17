@@ -1,0 +1,110 @@
+body{
+    text-align: center;
+}
+.strikeThrough:checked + h5{
+    text-decoration: line-through
+}
+body {
+    background: url('background.jpg');
+    background-size: cover;
+} 
+#container {
+    background-image: linear-gradient(to right, rgb(234, 0, 255) , rgb(0, 255, 200));
+     margin-top: 10vh;
+     margin-left: 20vw;
+     margin-right: 20vw;
+     min-height: 80vh;
+     margin-bottom: 10vh;
+}
+input[type=text] {
+    font-size: large;
+    width: 90%;
+    padding: 6px 10px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+    background-color: transparent;
+    
+    border: none;
+    border-bottom: 2px solid greenyellow;
+}
+input[type=date], select {
+    margin: 0;
+    font-size: large;
+    width: 40%;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid greenyellow;
+    background-color: transparent;
+    border-radius: 4px;
+    
+
+}
+input[type=date] {
+    margin-right: 9%;
+}
+*:focus{
+    
+    outline: none;
+    
+}
+input[type=text]:focus {
+    border-bottom: 2px solid blueviolet;
+    border-radius: 4px;
+}
+h1{
+    
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 2rem;
+}
+button {
+    width: 20%;
+    padding: 1rem;
+    font-size: 0.8rem;
+    
+    border-radius: 4px;
+    border: none;
+}
+#submit-btn{
+    margin-right: 10%;
+    
+}
+ul{
+    list-style-type: none;
+}
+li{
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-between;
+}
+
+#checkbox{
+    padding-top: 2.1rem;
+}
+#category{
+    
+    height: 30px;
+    width: 60px;
+    margin-top: auto;
+    margin-right: 5vw;
+    margin-bottom: auto;
+    text-align: center;
+    position: relative;
+    float: right;
+    background-image: linear-gradient(to right, rgb(0, 162, 255) , rgb(0, 255, 221));
+    overflow: hidden;
+
+}
+#catText{
+    
+    margin-top: -0.2rem;
+
+    margin-left: -0.4rem;
+   padding: 0.5rem;
+    text-align: center;
+    
+}
+#nameDate{
+    margin-right: auto;
+    margin-left: 2vw;
+}
