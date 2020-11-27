@@ -1,6 +1,7 @@
 body{
     text-align: center;
 }
+//for completed tasks
 .strikeThrough:checked + h5{
     text-decoration: line-through
 }
